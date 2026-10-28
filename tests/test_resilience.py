@@ -38,8 +38,7 @@ def test_retry_sync():
     assert flaky_call() == "Success"
     assert attempts == 3
 
-@pytest.mark.asyncio
-async def test_fallback_async():
+def test_fallback_async():
     async def fallback_fn(x):
         return x * 10
 
@@ -47,7 +46,7 @@ async def test_fallback_async():
     async def failing_async(x):
         raise ConnectionError("Remote timeout")
 
-    res = await failing_async(5)
+    res = asyncio.run(failing_async(5))
     assert res == 50
 
 def test_bulkhead_sync():
