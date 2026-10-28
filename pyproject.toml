@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "py-resilience"
+version = "0.1.0"
+description = "Ultra-lightweight zero-dependency Python resilience library: Circuit Breakers, Retries with Exponential Jitter, Fallbacks, and Bulkheads."
+readme = "README.md"
+authors = [{ name = "Milind Chatrabhuji", email = "milind.chatrabhuji@gmail.com" }]
+license = { text = "MIT" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+requires-python = ">=3.9"
+
+[project.urls]
+Homepage = "https://github.com/MilindChatrabhuji/py-resilience"
+Repository = "https://github.com/MilindChatrabhuji/py-resilience"
